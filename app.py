@@ -17,8 +17,8 @@ if st.button("Add Book"):
 st.session_state.books.append(book)
 st.success("The book is added!")
 
-if st.button("View all books") == 0:
-if len(st.session_state.books:
+if st.button("View all books"):
+  if len(st.session_state.books) == 0:
 st.write("Title:", book["title"])
 st.write("Author:", book["author"])
 st.write("Price:", book["price"])
