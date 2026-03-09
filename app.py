@@ -58,7 +58,7 @@ if st.button("Show the cheapest book"):
     st.write("No books")
 
 else:
-  cheapest = st.session_state.books:
+  cheapest = st.session_state.books
   if book["price"] < cheapest["price"]:
     cheapest = book
 
