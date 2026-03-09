@@ -42,7 +42,7 @@ st.header("Search by title")
 search_title = st.text_input("Enter title")
 if st.button("Search by title"):
 
-found  = False
+ found  = False
 
 for book in st.session_state.books
 if book["title"] == search_title:
