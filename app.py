@@ -8,7 +8,7 @@ author = st.text_input("Author")
 price = st.number_input("Price", min_value=0.0)
 if st.button("Add Book"):
 
-book = {
+ book = {
 "title": title,
 "author": author,
 "price": price
