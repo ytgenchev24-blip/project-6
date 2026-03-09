@@ -44,9 +44,9 @@ if st.button("Search by title"):
 
  found  = False
 
-for book in st.session_state.books
-if book["title"] == search_title:
-st.write(book)
+for book in st.session_state.books:
+  if book["title"] == search_title:
+    st.write(book)
 found = True
 
 
