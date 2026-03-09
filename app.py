@@ -36,7 +36,7 @@ for book in st.session_state.books:
 found = True
 
 if found == False:
-st.write("There are no books by this author")
+ st.write("There are no books by this author")
 
 st.header("Search by title")
 search_title = st.text_input("Enter title")
