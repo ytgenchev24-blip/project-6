@@ -19,7 +19,7 @@ st.success("The book is added!")
 
 if st.button("View all books"):
   if len(st.session_state.books) == 0:
-st.write("Title:", book["title"])
+    st.write("Title:", book["title"])
 st.write("Author:", book["author"])
 st.write("Price:", book["price"])
 st.write("--------------------")
