@@ -28,7 +28,7 @@ st.header("Search by author")
 search_author = st.text_input("Enter author name")
 if st.button("Search by author"):
 
-found = False
+ found = False
 
 for book in st.session_state.books:
 if book["author"] == search_author:
