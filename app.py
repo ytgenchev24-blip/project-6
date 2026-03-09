@@ -53,8 +53,8 @@ found = True
 if found == False:
  st.write("No found book")
 
-if st.button("Show the cheapest book")
-if len(st.session_state.books) == 0;
+if st.button("Show the cheapest book"):
+  if len(st.session_state.books) == 0;
 st.write("No books")
 
 else:
