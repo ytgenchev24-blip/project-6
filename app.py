@@ -2,10 +2,10 @@ import streamlit as st
 st.title("My mini library app")
 if "books" not in st.session_state:
   st.session_state.books = []
-st.header("Add book")
-title = st.text_input("Title")
-author = st.text_input("Author")
-price = st.number_input("Price", min_value=0.0)
+  st.header("Add book")
+  title = st.text_input("Title")
+  author = st.text_input("Author")
+  price = st.number_input("Price", min_value=0.0)
 if st.button("Add Book"):
 
  book = {
@@ -13,16 +13,15 @@ if st.button("Add Book"):
 "author": author,
 "price": price
 }
-
-st.session_state.books.append(book)
+  st.session_state.books.append(book)
 st.success("The book is added!")
 
 if st.button("View all books"):
   if len(st.session_state.books) == 0:
     st.write("Title:", book["title"])
-st.write("Author:", book["author"])
-st.write("Price:", book["price"])
-st.write("--------------------")
+    st.write("Author:", book["author"])
+    st.write("Price:", book["price"])
+    st.write("--------------------")
 
 st.header("Search by author")
 search_author = st.text_input("Enter author name")
@@ -31,9 +30,9 @@ if st.button("Search by author"):
  found = False
 
 for book in st.session_state.books:
- if book["author"] == search_author:
+  if book["author"] == search_author:
    st.write(book)
-found = True
+    found = True
 
 if found == False:
  st.write("There are no books by this author")
@@ -47,7 +46,7 @@ if st.button("Search by title"):
 for book in st.session_state.books:
   if book["title"] == search_title:
     st.write(book)
-found = True
+    found = True
 
 
 if found == False:
