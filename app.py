@@ -35,7 +35,7 @@ for book in st.session_state.books:
    st.write(book)
    found = True
     
-if found == False:
+  if found == False:
    st.write("There are no books by this author")
 
 st.header("Search by title")
@@ -50,7 +50,7 @@ for book in st.session_state.books:
     found = True
 
 
-if found == False:
+ if found == False:
  st.write("No found book")
 
 if st.button("Show the cheapest book"):
@@ -59,8 +59,9 @@ if st.button("Show the cheapest book"):
 
 else:
   cheapest = st.session_state.books
-  if book["price"] < cheapest["price"]:
-    cheapest = book
+  for book in st.session_state.books:
+    if book["price"] < cheapest["price"]:
+      cheapest = book
 
 st.write("The cheapest book is")
 st.write(cheapest)
